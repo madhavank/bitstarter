@@ -1,285 +1,297 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
-          rel="stylesheet" type="text/css">
-    <style type="text/css">
-
-      /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
-        }
-       .linediv-l {
-         border-right: 1px white solid;
-        }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
-      }
-
-      /* Landscape phones and down */
-      @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-      }
-
-      /* All form factors */
-
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
-
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
-    </style>
-  </head>
-  <body>
-
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Bitstarter</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>Mobile-Health</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">Provides health care access to everyone through internet</p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$3000</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
-            </div>
-          </div>
-          <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-        <div class="span5 copy">
-          <p>
-            Mobile-Health is a mobile enabled internet platform 
-            that brings doctors and patients together on a common 
-            internet platform. The platform provides facility for 
-            patients to log their medical records on-line. Patients 
-            can consult a doctor available from the pool of doctors
-            registered on the platform. This platform is primarily 
-            envisaged to provide access to a doctor and medical
-            facility for people living in rural areas seeking 
-            access to a doctor and medical facility 
-          </p>
-        </div>
-      </div>
-
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-            Mobile health is envisaged to be rolled out in emerging
-            markets like Africa, India and China. Enrolment of doctors
-            and patients will be done through a combination of mobile
-            and internet platform.
-          </p>
-        </div>
-        <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
-        </div>
-      </div>
-
-      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
-      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-      <div class="row-fluid faq">
-          <div class="span10 offset1">
-            <h3>FAQ</h3>
-            <div class="accordion" id="accordion2">
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseOne">
-                    What does Mobile-Health stand for?
-                  </a>
-                </div>
-                <div id="collapseOne" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Frequently Asked Question.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseTwo">
-                    How to enrol into Mobile-Health?
-                  </a>
-                </div>
-                <div id="collapseTwo" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    A question which is commonly asked by users.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-      </div>
-
-      <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
-      <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;\red163\green21\blue21;\red255\green0\blue0;\red0\green128\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cf1\f0\fs20 <!\cf2 DOCTYPE\cf0  \cf3 html\cf1 >\cf0\par
+\cf1 <\cf2 html\cf0  \cf3 lang\cf1 ="en">\cf0\par
+  \cf1 <\cf2 head\cf1 >\cf0\par
+    \cf1 <\cf2 meta\cf0  \cf3 charset\cf1 ="utf-8">\cf0\par
+    \cf1 <\cf2 title\cf1 >\cf0 My First Bitstarter\cf1 </\cf2 title\cf1 >\cf0\par
+    \cf1 <\cf2 meta\cf0  \cf3 name\cf1 ="viewport"\cf0  \cf3 content\cf1 ="width=device-width, initial-scale=1.0">\cf0\par
+    \cf1 <\cf2 link\cf0  \cf3 rel\cf1 ="stylesheet"\cf0  \cf3 href\cf1 ="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">\cf0\par
+    \cf1 <\cf2 link\cf0  \cf3 rel\cf1 ="stylesheet"\cf0  \cf3 href\cf1 ="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">\cf0\par
+    \cf1 <\cf2 link\cf0  \cf3 rel\cf1 ="stylesheet"\cf0  \cf3 href\cf1 ="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">\cf0     \par
+    \cf1 <\cf2 script\cf0  \cf3 src\cf1 ="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></\cf2 script\cf1 >\cf0\par
+    \cf1 <\cf2 script\cf0  \cf3 src\cf1 ="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></\cf2 script\cf1 >\cf0\par
+    \cf1 <\cf2 link\cf0  \cf3 href\cf1 ="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic"\cf0  \cf3 rel\cf1 ="stylesheet"\cf0  \cf3 type\cf1 ="text/css">\cf0\par
+    \cf1 <\cf2 link\cf0  \cf3 href\cf1 ="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"\cf0  \par
+          \cf3 rel\cf1 ="stylesheet"\cf0  \cf3 type\cf1 ="text/css">\cf0\par
+    \cf1 <\cf2 style\cf0  \cf3 type\cf1 ="text/css">\cf0\par
+\par
+      \cf4 /* Large desktop */\cf0\par
+      \cf2 @media (min-width: 980px) \cf0\{ \par
+        \cf3 body\cf0  \cf3\{\cf0\par
+         \cf3 padding-top\cf0 : \cf1 60px\cf0 ;\par
+        \}\par
+       \cf2 .linediv-l \cf0\{\par
+         \cf3 border-right\cf0 : \cf1 1px white solid\cf0 ;\par
+        \}\par
+       \cf2 .linediv-r \cf0\{\par
+         \cf3 border-left\cf0 : \cf1 1px white solid\cf0 ;\par
+       \}\par
+      \cf2\}\par
+\par
+      /* Landscape phones and down */\par
+      @media (max-width: 480px) \cf0\{ \par
+       \cf3 .copy\cf0  \cf3\{\cf0\par
+         \cf3 padding\cf0 : \cf1 2.5% 10%\cf0 ;\par
+       \}\par
+       \cf2 .linediv-l \cf0\{\par
+         \cf3 border-bottom\cf0 : \cf1 1px white solid\cf0 ;\par
+       \}\par
+       \cf2 .linediv-r \cf0\{\par
+         \cf3 border-top\cf0 : \cf1 1px white solid\cf0 ;\par
+       \}\par
+      \cf2\}\par
+\par
+      /* All form factors */\par
+\par
+      /* Main body and headings */\par
+      body\cf0\{\par
+        \cf3 font-family\cf0 : \cf1 'Open Sans', Helvetica, Arial, sans-serif\cf0 ;\par
+      \}\par
+      \cf2 .heading\cf0 ,\cf2  .subheading \cf0\{\par
+        \cf3 font-family\cf0 : \cf1 'Ubuntu', Helvetica, Arial, sans-serif\cf0 ;\par
+        \cf3 text-align\cf0 : \cf1 center\cf0 ;\par
+      \}\par
+      \cf2 p.lead \cf0\{\par
+        \cf3 padding-top\cf0 : \cf1 1.5%\cf0 ;\par
+        \cf3 font-size\cf0 : \cf1 24px\cf0 ;\par
+        \cf3 line-height\cf0 : \cf1 30px\cf0 ;\par
+      \}\par
+      \cf2 p \cf0\{\par
+        \cf3 font-size\cf0 : \cf1 18px\cf0 ;\par
+        \cf3 line-height\cf0 : \cf1 24px\cf0 ;\par
+      \}\par
+\par
+      \cf4 /* Video pitch and Action */\cf0\par
+      \cf2 .pitch \cf0\{\par
+        \cf3 padding\cf0 : \cf1 2.5% 0%\cf0 ;\par
+      \}\par
+      \cf2 .order \cf0\{\par
+        \cf3 padding\cf0 : \cf1 2% 0%\cf0 ;\par
+      \}\par
+      \cf2 .actions \cf0\{\par
+        \cf3 background-color\cf0 : \cf1 #343434\cf0 ;\par
+        \cf3 padding\cf0 : \cf1 3% 0%\cf0 ;\par
+      \}\par
+      \cf2 .video\cf0 ,\cf2  .thermometer\cf0 ,\cf2  .order\cf0 ,\cf2  .social\cf0 ,\cf2  .statistics \cf0\{\par
+        \cf3 text-align\cf0 : \cf1 center\cf0 ;\par
+      \}\par
+      \cf2 .statistics h3\cf0 ,\cf2  .statistics p \cf0\{\par
+        \cf3 color\cf0 : \cf1 white\cf0 ;\par
+      \}\par
+\par
+      \cf4 /* Marketing Copy and Footer */\cf0\par
+      \cf2 .copy \cf0\{\par
+        \cf3 padding-top\cf0 : \cf1 2.5%\cf0 ;\par
+        \cf3 padding-bottom\cf0 : \cf1 2.5%\cf0 ;\par
+        \cf3 text-align\cf0 : \cf1 justify\cf0 ;\par
+      \}\par
+      \cf2 .asset \cf0\{\par
+        \cf3 padding\cf0 : \cf1 2.5% 0%\cf0 ;\par
+      \}\par
+      \cf2 .footer \cf0\{\par
+        \cf3 color\cf0 : \cf1 #cccccc\cf0 ;\par
+        \cf3 text-align\cf0 : \cf1 center\cf0 ;\par
+      \}\par
+      \cf2 .footer p \cf0\{\par
+        \cf3 font-size\cf0 : \cf1 11px\cf0 ;\par
+      \}\par
+      \cf2 .footer a \cf0\{\par
+        \cf3 color\cf0 : \cf1 #ccccff\cf0 ;\par
+      \}\par
+    \cf1 </\cf2 style\cf1 >\cf0\par
+  \cf1 </\cf2 head\cf1 >\cf0\par
+  \cf1 <\cf2 body\cf1 >\cf0\par
+\par
+    \cf4 <!-- Mobile-friendly navbar adapted from example. -->\cf0\par
+    \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://twitter.github.io/bootstrap/examples/starter-template.html"}}{\fldrslt{\ul\cf1 http://twitter.github.io/bootstrap/examples/starter-template.html}}}\f0\fs20  -->\cf0\par
+    \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="navbar navbar-inverse navbar-fixed-top">\cf0\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="navbar-inner">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="container">\cf0\par
+          \cf1 <\cf2 button\cf0  \cf3 type\cf1 ="button"\cf0  \cf3 class\cf1 ="btn btn-navbar"\cf0\par
+                  \cf3 data-toggle\cf1 ="collapse"\cf0  \cf3 data-target\cf1 =".nav-collapse">\cf0\par
+            \cf1 <\cf2 span\cf0  \cf3 class\cf1 ="icon-bar"></\cf2 span\cf1 >\cf0\par
+            \cf1 <\cf2 span\cf0  \cf3 class\cf1 ="icon-bar"></\cf2 span\cf1 >\cf0\par
+            \cf1 <\cf2 span\cf0  \cf3 class\cf1 ="icon-bar"></\cf2 span\cf1 >\cf0\par
+          \cf1 </\cf2 button\cf1 >\cf0\par
+          \cf1 <\cf2 a\cf0  \cf3 class\cf1 ="brand"\cf0  \cf3 href\cf1 ="#">\cf0 Bitstarter\cf1 </\cf2 a\cf1 >\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="nav-collapse collapse">\cf0\par
+            \cf1 <\cf2 ul\cf0  \cf3 class\cf1 ="nav">\cf0\par
+              \cf1 <\cf2 li\cf0  \cf3 class\cf1 ="active"><\cf2 a\cf0  \cf3 href\cf1 ="#">\cf0 Home\cf1 </\cf2 a\cf1 ></\cf2 li\cf1 >\cf0\par
+              \cf1 <\cf2 li\cf1 ><\cf2 a\cf0  \cf3 href\cf1 ="#about">\cf0 About\cf1 </\cf2 a\cf1 ></\cf2 li\cf1 >\cf0\par
+              \cf1 <\cf2 li\cf1 ><\cf2 a\cf0  \cf3 href\cf1 ="#contact">\cf0 Contact\cf1 </\cf2 a\cf1 ></\cf2 li\cf1 >\cf0\par
+            \cf1 </\cf2 ul\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf4 <!--/.nav-collapse -->\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+    \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+    \cf4 <!-- We use row-fluid inside containers to achieve a resizable layout. -->\cf0\par
+    \cf4 <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->\cf0\par
+    \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/a/12270322"}}{\fldrslt{\ul\cf1 http://stackoverflow.com/a/12270322}}}\f0\fs20  -->\cf0\par
+    \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="container">\cf0\par
+      \cf4 <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "www.google.com/fonts/specimen/Ubuntu"}}{\fldrslt{\ul\cf1 www.google.com/fonts/specimen/Ubuntu}}}\f0\fs20  -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "www.google.com/fonts/specimen/Ubuntu#pairings"}}{\fldrslt{\ul\cf1 www.google.com/fonts/specimen/Ubuntu#pairings}}}\f0\fs20  -->\cf0\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid heading">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span12">\cf0\par
+          \cf1 <\cf2 h1\cf1 >\cf0 Product: Development Version\cf1 </\cf2 h1\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0  \par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid subheading">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span12">\cf0\par
+          \cf4 <!-- Special typography from Bootstrap for lead paragraph. -->\cf0\par
+          \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://twitter.github.io/bootstrap/base-css.html#typography"}}{\fldrslt{\ul\cf1 http://twitter.github.io/bootstrap/base-css.html#typography}}}\f0\fs20  -->\cf0\par
+          \cf1 <\cf2 p\cf0  \cf3 class\cf1 ="lead">\cf0 One sentence description.\cf1 </\cf2 p\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid pitch">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span5 offset1 video">\cf0\par
+          \cf1 <\cf2 img\cf0  \cf3 class\cf1 ="img-polaroid"\cf0  \cf3 alt\cf1 ="Placeholder"\cf0  \cf3 src\cf1 ="http://placehold.it/480x300">\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+        \cf4 <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span5 actions">\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid">\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span8 offset2">\cf0\par
+            \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid statistics">\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span4">\cf0\par
+                \cf4 <!-- linediv-l and linediv-r give dividing lines that look\par
+                different in horizontal and vertical layouts, illustrating\par
+                media queries. -->\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="linediv-l">\cf0\par
+                \cf1 <\cf2 h3\cf1 >\cf0 1000\cf1 </\cf2 h3\cf1 >\cf0  \cf1 <\cf2 p\cf1 >\cf0 backers\cf1 </\cf2 p\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span4">\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="linediv-c">\cf0\par
+                  \cf1 <\cf2 h3\cf1 >\cf0 $6000\cf1 </\cf2 h3\cf1 >\cf0  \cf1 <\cf2 p\cf1 >\cf0 of $10,000\cf1 </\cf2 p\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span4">\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="linediv-r">\cf0\par
+                \cf1 <\cf2 h3\cf1 >\cf0 10\cf1 </\cf2 h3\cf1 >\cf0  \cf1 <\cf2 p\cf1 >\cf0 days left\cf1 </\cf2 p\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 </\cf2 div\cf1 >\cf0\par
+            \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid">\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span10 offset1">\cf0\par
+            \cf4 <!-- Bootstrap progress bar -->\cf0\par
+            \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://twitter.github.io/bootstrap/components.html#progress"}}{\fldrslt{\ul\cf1 http://twitter.github.io/bootstrap/components.html#progress}}}\f0\fs20  -->\cf0\par
+            \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="thermometer progress active">\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="bar bar-success"\cf0  \cf3 style\cf1 ="width: 60%;"></\cf2 div\cf1 >\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="bar bar-warning"\cf0  \cf3 style\cf1 ="width: 40%;"></\cf2 div\cf1 >\cf0\par
+            \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid">\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span6 offset3 order">\cf0\par
+            \cf4 <!-- Standard Bootstrap button. -->\cf0\par
+            \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://twitter.github.io/bootstrap/base-css.html#buttons"}}{\fldrslt{\ul\cf1 http://twitter.github.io/bootstrap/base-css.html#buttons}}}\f0\fs20  -->\cf0\par
+            \cf1 <\cf2 button\cf0  \cf3 class\cf1 ="btn btn-success btn-large">\cf0 Preorder\cf1 </\cf2 button\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid">\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span8 offset2 social">\cf0\par
+            \cf4 <!-- Social buttons are not included in default Bootstrap. -->\cf0\par
+            \cf4 <!-- See: {\field{\*\fldinst{HYPERLINK "http://noizwaves.github.io/bootstrap-social-buttons"}}{\fldrslt{\ul\cf1 http://noizwaves.github.io/bootstrap-social-buttons}}}\f0\fs20  -->\cf0\par
+            \cf1 <\cf2 button\cf0  \cf3 class\cf1 ="btn btn-twitter"><\cf2 i\cf0  \cf3 class\cf1 ="icon-twitter"></\cf2 i\cf1 >\cf0  | Twitter\cf1 </\cf2 button\cf1 >\cf0\par
+            \cf1 <\cf2 button\cf0  \cf3 class\cf1 ="btn btn-facebook"><\cf2 i\cf0  \cf3 class\cf1 ="icon-facebook"></\cf2 i\cf1 >\cf0  | Facebook\cf1 </\cf2 button\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+      \cf4 <!-- Beyond this part the marketing copy begins. -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"}}{\fldrslt{\ul\cf1 https://developer.mozilla.org/en-US/docs/Web/CSS/text-align}}}\f0\fs20  -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://twitter.github.io/bootstrap/base-css.html#images"}}{\fldrslt{\ul\cf1 http://twitter.github.io/bootstrap/base-css.html#images}}}\f0\fs20  -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://placehold.it"}}{\fldrslt{\ul\cf1 http://placehold.it}}}\f0\fs20  -->\cf0\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid section1">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span5 offset1 asset">\cf0\par
+          \cf1 <\cf2 img\cf0  \cf3 class\cf1 ="img-polaroid"\cf0   \cf3 alt\cf1 ="Placeholder"\cf0  \cf3 src\cf1 ="http://placehold.it/480x300">\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span5 copy">\cf0\par
+          \cf1 <\cf2 p\cf1 >\cf0\par
+            Mobile-Health is a mobile enabled internet platform \par
+            that brings doctors and patients together on a common \par
+            internet platform. The platform provides facility for \par
+            patients to log their medical records on-line. Patients \par
+            can consult a doctor available from the pool of doctors\par
+            registered on the platform. This platform is primarily \par
+            envisaged to provide access to a doctor and medical\par
+            facility for people living in rural areas seeking \par
+            access to a doctor and medical facility\par
+          \cf1 </\cf2 p\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid section2">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span5 offset1 copy copy-right">\cf0\par
+          \cf1 <\cf2 p\cf1 >\cf0\par
+            Mobile health is envisaged to be rolled out in emerging\par
+            markets like Africa, India and China. Enrolment of doctors\par
+            and patients will be done through a combination of mobile\par
+            and internet platform.\par
+          \cf1 </\cf2 p\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span5 asset">\cf0\par
+          \cf1 <\cf2 img\cf0  \cf3 class\cf1 ="img-polaroid"\cf0   \cf3 alt\cf1 ="Placeholder"\cf0  \cf3 src\cf1 ="http://placehold.it/480x300">\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+      \cf4 <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->\cf0\par
+      \cf4 <!-- This brings in jquery.js and bootstrap.js as dependencies. -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://twitter.github.io/bootstrap/javascript.html#collapse"}}{\fldrslt{\ul\cf1 http://twitter.github.io/bootstrap/javascript.html#collapse}}}\f0\fs20  -->\cf0\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid faq">\cf0\par
+          \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span10 offset1">\cf0\par
+            \cf1 <\cf2 h3\cf1 >\cf0 FAQ\cf1 </\cf2 h3\cf1 >\cf0\par
+            \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion"\cf0  \cf3 id\cf1 ="accordion2">\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion-group">\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion-heading">\cf0\par
+                  \cf1 <\cf2 a\cf0  \cf3 class\cf1 ="accordion-toggle"\cf0  \cf3 data-toggle\cf1 ="collapse"\cf0\par
+                     \cf3 data-parent\cf1 ="#accordion2"\cf0  \cf3 href\cf1 ="#collapseOne">\cf0\par
+                    What does Mobile-Health stand for?\par
+                  \cf1 </\cf2 a\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 id\cf1 ="collapseOne"\cf0  \cf3 class\cf1 ="accordion-body collapse">\cf0\par
+                  \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion-inner">\cf0\par
+                    Frequently Asked Question.\par
+                  \cf1 </\cf2 div\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion-group">\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion-heading">\cf0\par
+                  \cf1 <\cf2 a\cf0  \cf3 class\cf1 ="accordion-toggle"\cf0  \cf3 data-toggle\cf1 ="collapse"\cf0\par
+                     \cf3 data-parent\cf1 ="#accordion2"\cf0  \cf3 href\cf1 ="#collapseTwo">\cf0\par
+                    How to enrol into Mobile-Health?\par
+                  \cf1 </\cf2 a\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+                \cf1 <\cf2 div\cf0  \cf3 id\cf1 ="collapseTwo"\cf0  \cf3 class\cf1 ="accordion-body collapse">\cf0\par
+                  \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="accordion-inner">\cf0\par
+                    A question which is commonly asked by users.\par
+                  \cf1 </\cf2 div\cf1 >\cf0\par
+                \cf1 </\cf2 div\cf1 >\cf0\par
+              \cf1 </\cf2 div\cf1 >\cf0\par
+            \cf1 </\cf2 div\cf1 >\cf0\par
+          \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+\par
+      \cf4 <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->\cf0\par
+      \cf4 <!-- {\field{\*\fldinst{HYPERLINK "http://creativecommons.org/licenses/"}}{\fldrslt{\ul\cf1 http://creativecommons.org/licenses/}}}\f0\fs20  -->\cf0\par
+      \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="row-fluid footer">\cf0\par
+        \cf1 <\cf2 div\cf0  \cf3 class\cf1 ="span12">\cf0\par
+          \cf1 <\cf2 p\cf1 >\cf0 This work is licensed under\par
+            the \cf1 <\cf2 a\cf0  \cf3 href\cf1 ="http://creativecommons.org/licenses/by-sa/3.0/">\cf0 CC\par
+              By-SA 3.0\par
+            \cf1 </\cf2 a\cf1 >\cf0 , without all the cruft that would otherwise be\par
+            put at the bottom of the page.\cf1 </\cf2 p\cf1 >\cf0\par
+        \cf1 </\cf2 div\cf1 >\cf0\par
+      \cf1 </\cf2 div\cf1 >\cf0\par
+    \cf1 </\cf2 div\cf1 >\cf0\par
+  \cf1 </\cf2 body\cf1 >\cf0\par
+\pard\sa200\sl276\slmult1\cf1 </\cf2 html\cf1 >\cf0\lang9\f1\fs22\par
+}
+ 
