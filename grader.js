@@ -35,7 +35,7 @@ var OUT_FILE_NAME = "./outputfile.html"
 var assertFileExists = function(infile) {
     var instr = infile.toString();
     if(!fs.existsSync(instr)) {
-        console.log("%s does not exist. Exiting.", instr);
+ //       console.log("%s does not exist. Exiting.", instr);
         process.exit(1); // http://nodejs.org/api/process.html#process_process_exit_code
     }
     return instr;
@@ -50,7 +50,7 @@ var loadChecks = function(checksfile) {
 };
 
 var checkHtmlFile = function(htmlfile, checksfile) {
-    console.log("passed HTML file = " + htmlfile);
+  //  console.log("passed HTML file = " + htmlfile);
     $ = cheerioHtmlFile(htmlfile);
     var checks = loadChecks(checksfile).sort();
     var out = {};
@@ -67,9 +67,11 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
+/*
 var urlCheck = function() {
 	console.log("Control comes here");
 }
+*/
 
 if(require.main == module) {
     program
@@ -89,25 +91,23 @@ if(require.main == module) {
    if(program.url)
    {
 
-	//rest.get('https://github.com/madhavank/bitstarter/blob/master/index.html').on('complete',function(result) {
 	rest.get(process.argv[5]).on('complete',function(result) {
 		fs.writeFileSync(OUT_FILE_NAME, result);
 		program.file = OUT_FILE_NAME ;
-   	        console.log("Program.file assigned is " + program.file);	
-   	        console.log("Program.checks assigned is " + program.checks);	
+//   	        console.log("Program.file assigned is " + program.file);	
+ //  	        console.log("Program.checks assigned is " + program.checks);	
     		var checkJson = checkHtmlFile(program.file, program.checks);
     		var outJson = JSON.stringify(checkJson, null, 4);
 //		console.log("result from rest.get function call is " + result) ;	
-		console.log("Wrote into output3.html file") ;
+	//	console.log("Wrote into output3.html file") ;
     		console.log(outJson);
 	});
 
    }
    else
    {
-     	console.log("Program.file just before passing to checkHtml is " + program.file)
     	var checkJson = checkHtmlFile(program.file, program.checks);
-   	 var outJson = JSON.stringify(checkJson, null, 4);
+   	var outJson = JSON.stringify(checkJson, null, 4);
     	console.log(outJson);
     }
 } else {
